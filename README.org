@@ -1,12 +1,9 @@
 * Fall 2019 - Lab 06
 
-* Last name:
+* Last name: Alija
+* First name: Asllan
 
-* First name:
-
-
-* GitHub username:
-
+* GitHub username: aalija8157
 * Notes:
 
 
