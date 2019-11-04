@@ -36,12 +36,18 @@ string indent(string filename)
     while (std::getline(fin, line))
     {
         line = removeLeadingSpaces(line);
+        if (countChar(line, '{') >= 1)
+            numtabs = numtabs + 1;
         if (countChar(line, '}') >= 1)
             numtabs = numtabs - 1;
         for (int i = 0; i < numtabs; i++)
             out = out + '\t';
-        if (countChar(line, '{') >= 1)
-            numtabs = numtabs + 1;
+
+        if (countChar(line, '{') >= 1 && countChar(line, '}') == 0)
+        {
+            out.pop_back();
+        }
+       
         out = out + line + '\n';
     }
     return out;
